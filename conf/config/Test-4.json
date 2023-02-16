@@ -1,0 +1,9 @@
+{
+  "env": "Test-1",
+  "proxy": null,
+  "server": {
+    "act-url": "",
+    "asri-url": "https://sasi-test2.kubeodc-test.corp.intranet",
+    "autopilot-Test-4": "https://autopilotapp-test4-01.test.intranet:3443"
+  }
+}

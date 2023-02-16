@@ -1,0 +1,10 @@
+{
+  "env": "test-2",
+  "proxy": null,
+  "server": {
+    "act": "",
+    "sasi": "https://sasi-test2.kubeodc-test.corp.intranet",
+    "autopilot": "http://titanscertcarrier.clcloud.af.qwest.net:3001"
+
+  }
+}

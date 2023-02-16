@@ -1,0 +1,61 @@
+{
+  "naas": {
+    "uni": {
+      "create_uni_payload": {
+	"options": {
+		"description": "",
+		"variables": {
+			"requestPayload": {
+				"parentCorrelationId": "AP-551883164-0903-DIA-UNI-Hari004",
+				"customerName": "Level 3 Demo and Testing",
+    			     "customerEID": "966529",
+				"orderSource": "autopilot",
+				"productSubType": "port",
+				"serviceType": "internet",
+				"productOfferName": "UNI",
+				"serviceOrderNumber": "551883164",
+				"orderId": "551883164-442887964",
+				"orderVersion": "1",
+				"mainProductId": "BBSB14782",
+				"bizOrgId": "",
+				"maxNumberOfEvc": 50,
+				"portSpeed": "1000",
+				"asriTransactionId": "551480658-10084-UNI01-1052",
+				"asriParentTransactionId": "551480658",
+				"aEndClli": "LABBRMCO",
+				"interfaceType": "Fiber",
+				"uniType": "Transparent",
+				"sfpMode": "SM",
+				"failFast" : false,
+				"productInstanceId": "442887964"
+
+
+			}
+
+		}
+	},
+	"groups": [
+
+   ],
+	"type": "automation"
+},
+      "response_data":
+		  {
+			"job_id": []
+		  },
+		"Request_Body":
+			{
+		"filter": {
+		  "job._id": "2db4fc1952e6446cb04212a4"
+		},
+		"options": {}
+	  }
+
+    },
+    "requestHeaders": {
+      "Content-Type": "application/json"
+    }
+
+  }
+}
+

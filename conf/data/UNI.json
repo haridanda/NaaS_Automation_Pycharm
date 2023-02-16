@@ -1,0 +1,35 @@
+{
+   "UNI": {
+      "UNIRequest_payload":{
+   "options": {
+      "description": "",
+      "variables": {
+         "bandwidth": "1000",
+         "parentCorrelationId": "AP-5517337eb-0903-DIA-UNI-Pytest-Hari004",
+         "customerName": "SUNDAY UAT",
+         "customerNumber": "1242086",
+         "origSystemName": "autopilot",
+         "productType": "UNI",
+         "additionalProperties": {
+            "orderNumber": "551883162-442887962",
+            "serviceOrderNumber": "551883162",
+            "serviceComponentId": "551883162",
+            "orderId": "551883162-442887962",
+            "orderVersion": "1",
+            "bizOrgId": "1-T8BD",
+            "maxNumberOfEvc": 50,
+            "loareq": "no"
+         },
+         "aEndClli": "LTTNCOML",
+         "portType": "Fiber",
+         "sfpMode": "SM",
+         "productTypeAct": "simple_wan",
+         "uniType": "Transparent",
+         "piid": "442887962"
+      }
+   },
+   "groups": [
+   ],
+   "type": "automation"
+}
+}}
