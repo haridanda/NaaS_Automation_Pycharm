@@ -121,8 +121,8 @@ def get_uni_info( naas_config, data_provider):
     yield response.json()
     #return id, my_cookie
 
-@scenario( 'dia_create.feature', 'Create DIA order', features_base_dir= "NaaS_Automation/NaaSFlow/DIA/test/features")
-#@scenario( 'dia_create.feature', 'Create DIA order', features_base_dir= "features")
+@scenario( 'dia_create.feature', 'Create DIA order', features_base_dir= "NaaS_Automation/NaaSFlow/DIA/test/Features")
+#@scenario( 'dia_create.feature', 'Create DIA order', features_base_dir= "Features")
 
 @pytest.mark.skipif (flag = False)
 @then('create UNI')

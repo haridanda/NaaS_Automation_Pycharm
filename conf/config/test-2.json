@@ -2,9 +2,11 @@
   "env": "test-2",
   "proxy": null,
   "server": {
-    "act": "",
+    "act-url": "",
     "sasi": "https://sasi-test2.kubeodc-test.corp.intranet",
-    "autopilot": "http://titanscertcarrier.clcloud.af.qwest.net:3001"
-
+    "sasi-wrap": "https://sasi-sasiwrap-test2.kubeodc.corp.intranet",
+    "asri-url": "https://sasi-test2.kubeodc-test.corp.intranet",
+    "autopilot": "https://autopilotapp-test2-01.test.intranet:3443",
+    "autopilot-Test-4": "https://autopilotapp-test4-01.test.intranet:3443"
   }
 }

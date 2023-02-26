@@ -4,11 +4,11 @@ import requests
 
 @pytest.fixture(scope="class")
 def Post_UNI_SL():
-    url = "https://autopilotapp-test1-01.test.intranet:3443/workflow_engine/startJobWithOptions"
+    url = "https://autopilotapp-test2-01.test.intranet:3443/workflow_engine/startJobWithOptions"
     path = "/LNAAS_DELETE_UNI_SL_V1"
     Host = url + path
 
-    headers = {"Content-Type" : "application/json", "cookie": "token=NWJkMWM4YWQxOGE1N2E0NTZjMmE0MGJjOTFlMmIyYjA="}
+    headers = {"Content-Type" : "application/json", "cookie": "token=YWMwNDQzZmMyZThlMGUwMjVkN2YxZmUzYjY1ZDY1MzQ="}
     print(Host)
     request_body = {
    "options":{
@@ -29,7 +29,7 @@ def Post_UNI_SL():
     "customerRequestedDate": "2021-06-13",
     "customerCommittedDate": "2021-06-13",
     "productSubType": "port",
-    "serviceAlias": "CO/KXFN/000809/LUMN"
+    "serviceAlias": "CO/KXFN/000520/LUMN"
   }
 }
    },

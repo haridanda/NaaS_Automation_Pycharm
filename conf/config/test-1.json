@@ -3,8 +3,9 @@
   "proxy": null,
   "server": {
     "act-url": "",
-    "sasi": "https://sasi-test2.kubeodc-test.corp.intranet",
-    "asri-url": "https://sasi-test2.kubeodc-test.corp.intranet",
+    "sasi": "https://sasi-test1.kubeodc-test.corp.intranet",
+    "sasi-wrap": "https://sasi-sasiwrap-test1.kubeodc.corp.intranet",
+    "asri-url": "https://sasi-test1.kubeodc-test.corp.intranet",
     "autopilot": "https://autopilotapp-test1-01.test.intranet:3443",
     "autopilot-Test-4": "https://autopilotapp-test4-01.test.intranet:3443"
   }

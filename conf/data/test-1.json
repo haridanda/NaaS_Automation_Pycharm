@@ -53,6 +53,117 @@
         "job._id": ""
       },
       "options": {}
+    },
+    "generate_alias": {
+      "dimobjectname": "Service",
+      "typename": "Internet Access",
+      "attributes": [
+        {
+          "name": "enduserclli",
+          "value": "LABBRMCO"
+        },
+        {
+          "name": "uniportspeed",
+          "value": "1000"
+        }
+      ]
+    },
+    "Create_skinny": {
+      "options": {
+        "description": "",
+        "variables": {
+          "jobDescription": "HariDIACreateServiesALiasASRI-551883175-",
+          "resourceName": "internetaccesses",
+          "resourceData": {
+            "parentTransactionId": "551883175",
+            "resourceType": "InternetAccess",
+            "status": "Planned",
+            "name": "CO/IRXX/000154/LUMN",
+            "customer": {
+              "name": "966529",
+              "resourceType": "Customer"
+            },
+            "attributes": [
+              {
+                "name": "PIID",
+                "value": "442887975"
+              },
+              {
+                "name": "SOURCE_ORDER_NUMBER",
+                "value": "5465654674"
+              },
+              {
+                "name": "CFS_ID",
+                "value": "66B74B62AAD1408F9158C786811AE778"
+              },
+              {
+                "name": "RFS_ID",
+                "value": "52254FF7ED594FC1B4F545F7618FF887"
+              }
+            ]
+          }
+        }
+      },
+      "groups": [
+      ],
+      "type": "automation"
+    },
+    "assign_IP": {
+      "circuitId": "CO/IRXX/000154/LUMN",
+      "maskWidth": "30",
+      "networkID": null,
+      "blockType": "Public",
+      "subnetGroup": "HYPER INTERNET",
+      "serviceType": "Hyper Internet",
+      "productType": "RED-DIA",
+      "piid": "442887975",
+      "networkType": "WAN",
+      "EntityCLLI": "LABBRMCO - 1242086",
+      "description": "RED-DIA _CO/IRXX/000154/LUMN _SUNDAY UAT"
+    },
+    "DIA_SL": {
+      "Create_DIA_SL_Payload": {
+        "options": {
+          "description": "",
+          "variables": {
+            "requestPayload": {
+              "parentCorrelationId": "AP-5517337eo-pytest-DIA-Service-Hari004",
+              "customerName": "SUNDAY UAT",
+              "customerNumber": "1-T8BD",
+              "orderSource": "SwIFT",
+              "productOfferName": "DIA",
+              "productSubType": "fiber_plus",
+              "productInstanceId": "442887975",
+              "orderId": "551883175",
+              "customerCommittedDate": "2021-03-17",
+              "customerRequestedDate": "2021-03-17",
+              "fulfillmentRequestNumber": "FR0014427-1",
+              "mainProductId": "442887975",
+              "orderVersion": "1",
+              "serviceOrderNumber": "551883175-442887975",
+              "uniServiceAlias": "CO/KXFN/000318/LUMN",
+              "serviceAlias": "CO/IRXX/000154/LUMN",
+              "mtu": 1500,
+              "ceVlan": "",
+              "serviceBandwidth": "1000 Mbps",
+              "wanIPAddressBlocks": [
+                {
+                  "ipVersion": "IPv4",
+                  "ipAddressBlock": "131.119.27.44/30"
+                }
+              ],
+              "rateLimit": 100,
+              "cfsId": "66B71262AAD110878158C786880A2238",
+              "rfsId": "52254F22ED594FC184F545F06278FFD7",
+              "ipv4TieDown": false,
+              "failFast": false
+            }
+          }
+        },
+        "groups": [
+        ],
+        "type": "automation"
+      }
     }
   }
 }
