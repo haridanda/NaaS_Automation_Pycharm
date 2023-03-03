@@ -1,9 +1,0 @@
-{
-  "env": "test-2",
-  "proxy": null,
-  "server": {
-    "act": "",
-    "asri": "https://sasi-test2.kubeodc-test.corp.intranet",
-    "autopilot": "https://www.google.com/"
-  }
-}

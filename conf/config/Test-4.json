@@ -1,9 +1,11 @@
 {
-  "env": "Test-1",
+  "env": "test-4",
   "proxy": null,
   "server": {
     "act-url": "",
-    "asri-url": "https://sasi-test2.kubeodc-test.corp.intranet",
-    "autopilot-Test-4": "https://autopilotapp-test4-01.test.intranet:3443"
+    "sasi": "https://sasi-test4.kubeodc-test.corp.intranet",
+    "sasi-wrap": "https://sasi-sasiwrap-test4.kubeodc.corp.intranet",
+    "asri-url": "https://sasi-test4.kubeodc-test.corp.intranet",
+    "autopilot": "https://autopilotapp-test4-01.test.intranet:3443"
   }
 }
