@@ -2,14 +2,14 @@ import json
 from random import randint
 import pytest
 import requests
-from pytest_bdd import given, when
+from pytest_bdd import given, when, then
 import time
 from NaaS_Automation.naas_test import NaaS_Test
 from conf.data import constant
 from NaaS_Automation.NaaSFlow.DIA.test.constants import *
 from NaaS_Automation.NaaSFlow.DIA.test.utils import get_data, write_data_UNI_SL, post_Create_UNI, validate_status, \
     Validate_UNI, Validate_Service_FD_Task, Validate_FD_Task, generate_service_alias, Create_skinny, assign_IP, \
-    Create_Service_SL, Delete_Service_SL, Delete_UNI_SL, write_data_Service_SL, get_port_Aval_MESH, get_cookies
+    Create_Service_SL, Delete_Service_SL, Delete_UNI_SL,generate_uniqueId_str, validate_UNI_ASRI, write_data_Service_SL, get_port_Aval_MESH, get_cookies
 
 @pytest.fixture(scope="session")
 def get_AP_token(naas_config, data_provider):
@@ -23,7 +23,6 @@ def get_AP_token(naas_config, data_provider):
     with open("API_token.json", "w") as token:
         token.write(json.dumps(cookies_dict))
     yield response
-
 
 @given('login AutoPilot')
 def test_login(get_AP_token, naas_test):
@@ -49,11 +48,7 @@ def test_port_check_Mesh(naas_config):
                 "===================== Mesh - PORT Avalibility Check Completed ===========================================")
     return flag
 
-def generate_uniqueId_str():
-    unique_value = randint(550000000, 558000000)
-    return (str(unique_value))
-
-
+@then('DIA Service Create & Delete')
 @pytest.mark.parametrize("input_dict", get_data(file=path))
 def test_Create_AUNI_SL(naas_config, data_provider, input_dict):
     with open("API_token.json", "r") as etoken:
@@ -64,23 +59,31 @@ def test_Create_AUNI_SL(naas_config, data_provider, input_dict):
     global PCID
     PCID = generate_uniqueId_str()
 
+    # Create UNI
     id = post_Create_UNI(PCID, naas_config=naas_config, data_provider=data_provider, input_dict=input_dict)
     AP_status_Url = naas_config.get_server("autopilot") + workflow_status + id
     response = requests.get(AP_status_Url, verify=False, cookies=cdict)
     response_json = response.json()
     print("===================== Validate UNI Job Status Port - Autopilot  ===========================================")
+
+    #Validate UNI WorkFlow status
     validate_status(response_json=response_json['tasks'], status='workflow_end', AP_status_Url=AP_status_Url,
                     cookies=cdict)
     dict_output = {}
     dict_output['sno'] = input_dict['sno']
     i = dict_output['sno']
     dict_output['id'] = id
+
+    # Validate Job ID
     dict_output_final = Validate_UNI(naas_config, data_provider, dict_output)
     print(dict_output_final)
     input_dict["asriServiceAlias"] = dict_output_final["asriServiceAlias"]
     write_data_UNI_SL(path, input_dict['sno'], dict_output=dict_output_final)
 
-    # FD validation
+    # ASRI Validation for UNI
+    validate_UNI_ASRI(naas_config, data_provider)
+
+    # FD validation for UNI
     UNI_FD = Validate_FD_Task(data_provider)
 
     # Genereate Skinny
@@ -95,7 +98,10 @@ def test_Create_AUNI_SL(naas_config, data_provider, input_dict):
     # Create Service SL
     Create_Service_SL(PCID, naas_config=naas_config, data_provider=data_provider, input_dict=input_dict, i=i)
 
-    # FD Validation
+    # ASRI Validation for Service
+    validate_Service_ASRI (naas_config, data_provider)
+
+    # FD Validation for Service
     Service_FD = Validate_Service_FD_Task(data_provider)
 
     #Delete Service

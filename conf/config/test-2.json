@@ -7,6 +7,7 @@
     "sasi-wrap": "https://sasi-sasiwrap-test2.kubeodc.corp.intranet",
     "asri-url": "https://sasi-test2.kubeodc-test.corp.intranet",
     "autopilot": "https://autopilotapp-test2-01.test.intranet:3443",
-    "autopilot-Test-4": "https://autopilotapp-test4-01.test.intranet:3443"
+    "autopilot-Test-4": "https://autopilotapp-test4-01.test.intranet:3443",
+    "fd_url": "http://workmate-svc-test2.kubeodc-test.corp.intranet/RestService/Enterprise/v4/Work/task/advancedSearch?include=p,aa"
   }
 }

@@ -8,7 +8,7 @@ def Post_UNI_SL():
     path = "/LNAAS_DELETE_UNI_SL_V1"
     Host = url + path
 
-    headers = {"Content-Type" : "application/json", "cookie": "token=ZTNiNzE4ZTVjYmE5NDI1M2E0MzZhNWYwMTY4MmRkNjU="}
+    headers = {"Content-Type" : "application/json", "cookie": "token=NGViMWUzZTQ3MGQ0MTM0YWNmZjZiNDJhNTcxNDNmYjE="}
     print(Host)
     request_body = {
    "options":{
@@ -29,7 +29,7 @@ def Post_UNI_SL():
     "customerRequestedDate": "2021-06-13",
     "customerCommittedDate": "2021-06-13",
     "productSubType": "port",
-    "serviceAlias": "CO/KXFN/000773/LUMN"
+    "serviceAlias": "CO/KXFN/000804/LUMN"
   }
 }
    },

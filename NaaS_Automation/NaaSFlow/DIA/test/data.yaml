@@ -1,0 +1,12 @@
+- Scenario_Name: Create DIA Service with Transparent UNI
+  input_data:
+    aEndcilli: LABBRMCO
+    fail_fast: true
+    uni_Port_speed: 100Mbps
+    uni_Type: Transparent
+    uni_interface_Type: Fiber
+    uni_serviceType: internet
+  output_data:
+    UNI_ACT_ID: 99119826-aba8-42f2-a374-db932807108c
+    UNI_JobID: 4f6f38b8a44d458ba2b086d4
+    UNI_Service_Allias: CO/KXFN/000802/LUMN
