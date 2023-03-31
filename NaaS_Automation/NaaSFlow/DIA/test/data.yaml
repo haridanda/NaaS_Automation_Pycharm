@@ -7,11 +7,50 @@
     uni_Type: Transparent
     uni_interface_Type: Fiber
   output_data:
-    Oline_ACT_ID: 7c380297-2bff-45ec-9f2a-8ce8b46cf5fe
-    Oline_Service_Allias: CO/L9XZ/000360/LUMN
-    Service_ACT_ID: 84323b2a-485e-42d8-bba4-9f4a232ba91d
-    Service_SL_JobID: 40612877aeab4a56b81988f6
-    Service_Service_Allias: CO/IRXX/000474/LUMN
-    UNI_ACT_ID: 9424a61e-ccb0-4cca-8e93-3e3ee23bb63c
-    UNI_JobID: 633d04575921456590d7a6c7
-    UNI_Service_Allias: CO/KXFN/000830/LUMN
+    Oline_ACT_ID: bcbdcb96-1ffd-48ac-b783-a4edd86bb2b4
+    Oline_Service_Allias: CO/L9XZ/000345/LUMN
+    Service_ACT_ID: d1e1a620-b63e-4e12-a08e-e89f7e739c2c
+    Service_SL_JobID: a1c0ee6ff6ed4205a77833d0
+    Service_Service_Allias: CO/IRXX/000469/LUMN
+    UNI_ACT_ID: 8bb7f105-c0ea-46bd-a860-c5ed3a5e8615
+    UNI_JobID: 96c8051ca8514aa6ba71d7e8
+    UNI_Service_Allias: CO/KXFN/000795/LUMN
+
+- Scenario_Name: Create DIA Service with Transparent UNI with static
+  input_data:
+    aEndcilli: LABBRMCO
+    fail_fast: true
+    serviceType: internet
+    static: true
+    uni_Port_speed: 100Mbps
+    uni_Type: Transparent
+    uni_interface_Type: Fiber
+  output_data:
+    Oline_ACT_ID: 98537c33-6018-45d0-9eeb-65d1b098d1b6
+    Oline_Service_Allias: CO/L9XZ/000324/LUMN
+    Service_ACT_ID: 51f8a9ae-d955-4cba-a331-213a5a4efd7c
+    Service_SL_JobID: e91f1bc6f6df4bbbb0492ddd
+    Service_Service_Allias: CO/IRXX/000458/LUMN
+    UNI_ACT_ID: 1ae6530c-dfff-4ab4-8e73-41d413745dec
+    UNI_JobID: 6c63f8f13083474cbe67df98
+    UNI_Service_Allias: CO/KXFN/000766/LUMN
+
+- Scenario_Name: Create DIA Service with Transparent UNI with BGP and Static
+  input_data:
+    aEndcilli: LTTNCOML
+    bgp: true
+    fail_fast: true
+    serviceType: internet
+    static: true
+    uni_Port_speed: 100Mbps
+    uni_Type: Transparent
+    uni_interface_Type: Fiber
+  output_data:
+    Oline_ACT_ID: cf446290-0c88-4a6a-a43f-f59621a38e3d
+    Oline_Service_Allias: CO/L9XZ/000188/LUMN
+    Service_ACT_ID: f037acd3-222e-48f2-8d94-669f7ded9298
+    Service_SL_JobID: e433ed17a3be4ff9a8b5adf7
+    Service_Service_Allias: CO/IRXX/000340/LUMN
+    UNI_ACT_ID: e11416a2-47f9-44ad-b52d-7c871028af59
+    UNI_JobID: 5428a6ef41e94b4ab191d6cf
+    UNI_Service_Allias: CO/KXFN/000546/LUMN
