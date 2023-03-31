@@ -179,11 +179,11 @@
                   "ipAddressBlock": "131.119.27.44/30"
                 }
               ],
+
               "rateLimit": 100,
               "cfsId": "66B71262AAD110878158C786880A2238",
               "rfsId": "52254F22ED594FC184F545F06278FFD7",
-              "ipv4TieDown": false,
-              "failFast": false
+              "ipv4TieDown": false
             }
           }
         },
@@ -191,6 +191,16 @@
         ],
         "type": "automation"
       },
+      "static": [
+          {
+            "route": "",
+            "nextHop": "192.108.1.2",
+            "inject": "customer-static-bb2",
+            "ddos": true,
+            "customerProvidedIp": true
+          }
+        ]
+      ,
       "Delete_DIA_SL_Payload": {
         "options": {
           "description": "",

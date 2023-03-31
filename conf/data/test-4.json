@@ -6,7 +6,7 @@
           "description": "",
           "variables": {
             "requestPayload": {
-              "parentCorrelationId": "AP-551883164-pytest-0903-DIA-UNI-Hari004",
+              "parentCorrelationId": "AP-PARENTCID-pytest-DIA-UNI-Hari004",
               "customerName": "Level 3 Demo and Testing",
               "customerEID": "966529",
               "orderSource": "autopilot",
@@ -81,6 +81,21 @@
       },
       "options": {}
     },
+    "validate_UNI_v2": {
+      "options": {
+        "page": {
+          "skip": 0,
+          "limit": 10
+        },
+        "sort": {
+          "field": "metrics.start_time",
+          "direction": -1
+        },
+        "filter": {
+          "_id": ""
+        }
+      }
+    },
     "generate_alias": {
       "dimobjectname": "Service",
       "typename": "Internet Access",
@@ -148,13 +163,30 @@
       "EntityCLLI": "LABBRMCO - 1242086",
       "description": "RED-DIA _CO/IRXX/000154/LUMN _SUNDAY UAT"
     },
+    "release_IP": {
+      "circuitId": "CO/IRXX/000355/LUMN",
+      "cidrRange": "131.119.27.144/30"
+    },
+    "assign_Static_IP": {
+      "circuitId": "CO/IRXX/000154/LUMN",
+      "maskWidth": "30",
+      "networkID": null,
+      "blockType": "Public",
+      "subnetGroup": "HYPER INTERNET",
+      "serviceType": "Hyper Internet",
+      "productType": "RED-DIA",
+      "piid": "442887975",
+      "networkType": "LAN",
+      "EntityCLLI": "LABBRMCO - 1242086",
+      "description": "RED-DIA _CO/IRXX/000154/LUMN _SUNDAY UAT"
+    },
     "DIA_SL": {
       "Create_DIA_SL_Payload": {
         "options": {
           "description": "",
           "variables": {
             "requestPayload": {
-              "parentCorrelationId": "AP-5517337eo-pytest-DIA-Service-Hari004",
+              "parentCorrelationId": "AP-PARENTCID-pytest-DIA-Service-Hari004",
               "customerName": "SUNDAY UAT",
               "customerNumber": "1-T8BD",
               "orderSource": "SwIFT",
@@ -182,8 +214,7 @@
               "rateLimit": 100,
               "cfsId": "66B71262AAD110878158C786880A2238",
               "rfsId": "52254F22ED594FC184F545F06278FFD7",
-              "ipv4TieDown": false,
-              "failFast": false
+              "ipv4TieDown": false
             }
           }
         },
@@ -191,6 +222,31 @@
         ],
         "type": "automation"
       },
+      "static": [
+        {
+          "route": "",
+          "nextHop": "192.108.1.2",
+          "inject": "customer-static-bb2",
+          "ddos": false,
+          "customerProvidedIp": false
+        }
+      ],
+      "bgp": [
+        {
+          "neighbor": "4.1.0.0/27��/��2100:1900:4abc::8888/125",
+          "asn": "5234",
+          "password": "drek98uj",
+          "blackhole": false,
+          "exportPolicies": [
+            "default"
+          ],
+          "importPolicies": "LEVEL3::RS-ipv6-test-ditie",
+          "meds": false,
+          "comms": false,
+          "customerMaintainer": "LMNTST-MNT",
+          "customerProvidedIp": false
+        }
+      ],
       "Delete_DIA_SL_Payload": {
         "options": {
           "description": "",
@@ -225,7 +281,44 @@
         "groups": [
         ],
         "type": "automation"
+      },
+      "Delete_Oline_TL_Payload":{
+        "options": {
+          "description": "",
+          "variables": {
+            "requestPayload": {
+              "parentCorrelationId": "AP-5517337et-0903-DIA-Service-Delete_Hari004-1-DELETE-OLINE",
+              "customerName": "SUNDAY UAT",
+              "customerNumber": "1-T8BD",
+              "orderSource": "SwIFT",
+              "productOfferName": "UNI",
+              "productInstanceId": "442887980",
+              "serviceOrderNumber": "551883180",
+              "orderVersion": "1",
+              "orderId": "551883180",
+              "serviceAlias": "CO/L9XZ/000239/LUMN",
+              "mainProductId": "442887975",
+              "fulfillmentRequestNumber": "FR0014427-1",
+              "customerRequestedDate": "2023-02-19",
+              "customerCommittedDate": "2023-02-19"
+            }
+          }
+        },
+        "groups": [
+        ],
+        "type": "automation"
       }
+    },
+    "FD_Validate_Payload": {
+      "searchFields": [
+        {
+          "fieldName": "TASK_INSTANCE_ID",
+          "value": [],
+          "operator": "starts with",
+          "tableName": "task_instance",
+          "isDateCriteria": false
+        }
+      ]
     }
   }
 }

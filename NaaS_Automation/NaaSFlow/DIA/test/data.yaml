@@ -2,11 +2,16 @@
   input_data:
     aEndcilli: LABBRMCO
     fail_fast: true
+    serviceType: internet
     uni_Port_speed: 100Mbps
     uni_Type: Transparent
     uni_interface_Type: Fiber
-    uni_serviceType: internet
   output_data:
-    UNI_ACT_ID: 99119826-aba8-42f2-a374-db932807108c
-    UNI_JobID: 4f6f38b8a44d458ba2b086d4
-    UNI_Service_Allias: CO/KXFN/000802/LUMN
+    Oline_ACT_ID: 7c380297-2bff-45ec-9f2a-8ce8b46cf5fe
+    Oline_Service_Allias: CO/L9XZ/000360/LUMN
+    Service_ACT_ID: 84323b2a-485e-42d8-bba4-9f4a232ba91d
+    Service_SL_JobID: 40612877aeab4a56b81988f6
+    Service_Service_Allias: CO/IRXX/000474/LUMN
+    UNI_ACT_ID: 9424a61e-ccb0-4cca-8e93-3e3ee23bb63c
+    UNI_JobID: 633d04575921456590d7a6c7
+    UNI_Service_Allias: CO/KXFN/000830/LUMN

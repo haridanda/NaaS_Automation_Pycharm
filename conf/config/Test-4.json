@@ -6,6 +6,8 @@
     "sasi": "https://sasi-test4.kubeodc-test.corp.intranet",
     "sasi-wrap": "https://sasi-sasiwrap-test4.kubeodc.corp.intranet",
     "asri-url": "https://sasi-test4.kubeodc-test.corp.intranet",
-    "autopilot": "https://autopilotapp-test4-01.test.intranet:3443"
+    "autopilot": "https://autopilotapp-test4-01.test.intranet:3443",
+    "fd_url": "http://workmate-svc-test4.kubeodc-test.corp.intranet/RestService/Enterprise/v4/Work/task/advancedSearch?include=p,aa",
+    "act_validation": "http://act-env4.idc1.level3.com:8081/ac-ip-confgen-rs/rs/Network/v1/Provisioning/actRequest/"
   }
 }
